@@ -1,0 +1,108 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5em);
+  margin: 20px auto;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout for Parking Slots */
+#parking-info {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 480px) {
+  #parking-info {
+    grid-template-columns: repeat(5, 2fr);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  #parking-info {
+    grid-template-columns: repeat(5, 2fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  #parking-info {
+    grid-template-columns: repeat(5, 2fr);
+  }
+}
+
+/* Parking Slot Styles */
+.parking-slot {
+  padding: clamp(15px, 3vw, 30px);
+  border-radius: 10px;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2em);
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  border: 1px solid #b8b8b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parking-slot.available {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.parking-slot.occupied {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Parking Status Container */
+.parking-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Status Boxes */
+.total-slots,
+.available-slots {
+  flex: 1 1 200px;
+  padding: clamp(15px, 3vw, 20px);
+  border-radius: 10px;
+  font-size: clamp(1rem, 3vw, 22px);
+  text-align: center;
+  color: #fff;
+  min-width: 1px;
+}
+
+.total-slots {
+  background-color: #28a745;
+}
+
+.available-slots {
+  background-color: #dc3545;
+}
+
+
+
